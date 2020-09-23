@@ -2,6 +2,7 @@ package kiscode.study.algorithm.test;
 
 import kiscode.study.algorithm.MockData;
 import kiscode.study.algorithm.sort.Bubble;
+import kiscode.study.algorithm.sort.Selection;
 
 import java.util.Arrays;
 
@@ -16,8 +17,15 @@ public class SortTest {
 
         System.out.println("Original Array:");
         System.out.println(Arrays.toString(array));
+
+/*
         Bubble.sort(array);
         System.out.println("Bubble sort Array:");
+        System.out.println(Arrays.toString(array));
+*/
+
+        Selection.sort(array);
+        System.out.println("Selection sort Array:");
         System.out.println(Arrays.toString(array));
     }
 }
