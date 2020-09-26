@@ -1,10 +1,7 @@
 package kiscode.study.algorithm.test;
 
 import kiscode.study.algorithm.MockData;
-import kiscode.study.algorithm.sort.Bubble;
-import kiscode.study.algorithm.sort.Insertion;
-import kiscode.study.algorithm.sort.Selection;
-import kiscode.study.algorithm.sort.Shell;
+import kiscode.study.algorithm.sort.*;
 
 import java.util.Arrays;
 
@@ -15,7 +12,7 @@ import java.util.Arrays;
  */
 public class SortTest {
     public static void main(String[] args) {
-        Integer[] array = MockData.randomArray(100);
+        Integer[] array = MockData.randomArray(10);
 
         System.out.println("Original Array:");
         System.out.println(Arrays.toString(array));
@@ -37,10 +34,17 @@ public class SortTest {
         System.out.println("Insertion sort Array:");
         System.out.println(Arrays.toString(array));
         */
+/*
 
 
         Shell.sort(array);
         System.out.println("Shell sort Array:");
+        System.out.println(Arrays.toString(array));
+*/
+
+
+        Quick.sort(array);
+        System.out.println("Quick sort Array:");
         System.out.println(Arrays.toString(array));
     }
 }
