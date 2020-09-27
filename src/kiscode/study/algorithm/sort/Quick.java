@@ -1,5 +1,7 @@
 package kiscode.study.algorithm.sort;
 
+import kiscode.study.algorithm.sort.util.SortUtil;
+
 /****
  * Description: 快速排序
  * Author:  keno
@@ -15,6 +17,7 @@ public class Quick {
             return;
         }
         int partPos = partion(arr, startIndex, endIndex);
+//        System.out.println("partPos = " + partPos);
         quickSort(arr, startIndex, partPos - 1);
         quickSort(arr, partPos + 1, endIndex);
     }
@@ -26,22 +29,17 @@ public class Quick {
 
         while (left < right) {
             //先从右往左扫描，找到比基准值pivot小的元素
-            while (SortUtil.greater(pivot, arr[--right])) {
-                if (right == startIndex) {
-                    break;
-                }
+            while (left < right && SortUtil.greater(arr[--right], pivot)) {
             }
 
-            while (SortUtil.greater(arr[++left], pivot)) {
-                if (left == endIndex) {
-                    break;
-                }
+            //从左往右扫描，找到比基准值pivot大的元素
+            while (left < right && !SortUtil.greater(arr[++left], pivot)) {
             }
-
             SortUtil.exchange(arr, left, right);
+//            System.out.println("left = " + left + "\tright = " + right);
         }
-        SortUtil.exchange(arr, startIndex, right);
-        return right;
+        SortUtil.exchange(arr, startIndex, left);
+        return left;
     }
 
 }

@@ -1,4 +1,4 @@
-package kiscode.study.algorithm.sort;
+package kiscode.study.algorithm.sort.util;
 
 import java.util.Random;
 
