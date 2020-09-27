@@ -14,15 +14,16 @@ import java.util.Calendar;
  */
 public class SortTest {
     public static void main(String[] args) {
-        Integer[] array = MockData.randomArray(30000);
+        Integer[] array = MockData.randomArray(4);
 
 //        System.out.println("Original Array:");
 //        System.out.println(Arrays.toString(array));
-        sortTest(array, SortType.BUBBLE);
-        sortTest(array, SortType.SELECTION);
-        sortTest(array, SortType.INSERTION);
-        sortTest(array, SortType.SELECTION);
-        sortTest(array, SortType.QUICK);
+//        sortTest(array, SortType.BUBBLE);
+//        sortTest(array, SortType.SELECTION);
+//        sortTest(array, SortType.INSERTION);
+//        sortTest(array, SortType.SELECTION);
+//        sortTest(array, SortType.QUICK);
+        sortTest(array, SortType.MERGE);
     }
 
 
@@ -40,6 +41,9 @@ public class SortTest {
         switch (type) {
             case QUICK:
                 Quick.sort(array);
+                break;
+            case MERGE:
+                Merge.sort(array);
                 break;
             case BUBBLE:
                 Bubble.sort(array);
