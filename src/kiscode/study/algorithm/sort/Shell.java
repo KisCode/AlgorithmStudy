@@ -1,5 +1,7 @@
 package kiscode.study.algorithm.sort;
 
+import kiscode.study.algorithm.sort.util.SortUtil;
+
 /****
  * Description:  希尔排序（插入排序改进版）,又称 “缩小增量排序”
  * 实现思路：
@@ -24,6 +26,14 @@ public class Shell {
                 }
             }*/
 
+            for (int i = 0; i < length - gap; i++) {
+                for (int j = i + gap; j > 0; j -= gap) {
+                    if (SortUtil.greater(arr[j - 1], arr[j])) {
+                        SortUtil.exchange(arr, j - 1, j);
+                    }
+                }
+            }
+/*
             //1. 找到待插入的元素（有序数组）
             for (int i = gap; i < length; i++) {
                 // 把待插入的元素插入到有序数组中
@@ -32,7 +42,7 @@ public class Shell {
                         SortUtil.exchange(arr, j - gap, j);
                     }
                 }
-            }
+            }*/
             gap = gap / 2;
         }
     }
