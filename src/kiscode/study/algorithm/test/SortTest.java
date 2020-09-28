@@ -14,16 +14,17 @@ import java.util.Calendar;
  */
 public class SortTest {
     public static void main(String[] args) {
-        Integer[] array = MockData.randomArray(4);
-
+        Integer[] array = MockData.randomArray(200);
+//
 //        System.out.println("Original Array:");
 //        System.out.println(Arrays.toString(array));
 //        sortTest(array, SortType.BUBBLE);
 //        sortTest(array, SortType.SELECTION);
 //        sortTest(array, SortType.INSERTION);
 //        sortTest(array, SortType.SELECTION);
-//        sortTest(array, SortType.QUICK);
+//        sortTest(array, SortType.SHELL);
         sortTest(array, SortType.MERGE);
+        sortTest(array, SortType.QUICK);
     }
 
 
@@ -34,7 +35,7 @@ public class SortTest {
         sort(arrayNew, type);
         long waitTime = Calendar.getInstance().getTimeInMillis() - startTime;
         System.out.println(type + " sort waitTime:" + waitTime + "ms");
-//        System.out.println(Arrays.toString(arrayNew));
+        System.out.println(Arrays.toString(arrayNew));
     }
 
     private static void sort(Integer[] array, SortType type) {
