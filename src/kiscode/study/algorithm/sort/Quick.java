@@ -35,10 +35,10 @@ public class Quick {
             //从左往右扫描，找到比基准值pivot大的元素
             while (left < right && !SortUtil.greater(arr[++left], pivot)) {
             }
-            SortUtil.exchange(arr, left, right);
+            SortUtil.swap(arr, left, right);
 //            System.out.println("left = " + left + "\tright = " + right);
         }
-        SortUtil.exchange(arr, startIndex, left);
+        SortUtil.swap(arr, startIndex, left);
         return left;
     }
 

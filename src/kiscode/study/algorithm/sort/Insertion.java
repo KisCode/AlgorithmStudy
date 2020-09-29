@@ -21,7 +21,7 @@ public class Insertion {
         for (int i = 0; i < arr.length - 1; i++) { //控制排序趟数，一共arr.length-1趟
             for (int j = i + 1; j > 0; j--) {
                 if (SortUtil.greater(arr[j - 1], arr[j])) {
-                    SortUtil.exchange(arr, j - 1, j);
+                    SortUtil.swap(arr, j - 1, j);
                 }
             }
         }

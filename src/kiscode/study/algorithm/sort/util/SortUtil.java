@@ -25,7 +25,7 @@ public class SortUtil {
         return a.compareTo(b) < 0;
     }
 
-    public static void exchange(Comparable[] a, int i, int j) {
+    public static void swap(Comparable[] a, int i, int j) {
         Comparable temp = a[j];
         a[j] = a[i];
         a[i] = temp;
