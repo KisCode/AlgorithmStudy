@@ -20,9 +20,9 @@ public class SortTest {
 
         System.out.println("Original Array:");
         System.out.println(Arrays.toString(array));
-        sortTest(array, SortType.BUBBLE);
+//        sortTest(array, SortType.BUBBLE);
 //        sortTest(array, SortType.SELECTION);
-//        sortTest(array, SortType.INSERTION);
+        sortTest(array, SortType.INSERTION);
 //        sortTest(array, SortType.SELECTION);
 //        sortTest(array, SortType.SHELL);
 //        sortTest(array, SortType.MERGE);

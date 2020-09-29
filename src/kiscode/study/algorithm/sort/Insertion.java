@@ -15,9 +15,10 @@ import kiscode.study.algorithm.sort.util.SortUtil;
 public class Insertion {
     /***
      * 插入排序
-     * @param arr 排序数组
+     * @param arr 待排序数组
      */
     public static void sort(Comparable[] arr) {
+        //1. 升序排序
         for (int i = 0; i < arr.length - 1; i++) { //控制排序趟数，一共arr.length-1趟
             for (int j = i + 1; j > 0; j--) {
                 if (SortUtil.greater(arr[j - 1], arr[j])) {
@@ -25,5 +26,17 @@ public class Insertion {
                 }
             }
         }
+/*
+
+        // 2. 降序排序
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j > 0; j--) {
+                if (SortUtil.less(arr[j - 1], arr[j])) {
+                    SortUtil.swap(arr, j - 1, j);
+                }
+            }
+        }
+*/
+
     }
 }
