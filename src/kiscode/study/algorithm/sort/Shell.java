@@ -29,7 +29,7 @@ public class Shell {
             for (int i = 0; i < length - gap; i++) {
                 for (int j = i + gap; j > 0; j -= gap) {
                     if (SortUtil.greater(arr[j - 1], arr[j])) {
-                        SortUtil.exchange(arr, j - 1, j);
+                        SortUtil.swap(arr, j - 1, j);
                     }
                 }
             }

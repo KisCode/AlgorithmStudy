@@ -16,15 +16,17 @@ public class SortTest {
     public static void main(String[] args) {
         Integer[] array = MockData.randomArray(200);
 //
-//        System.out.println("Original Array:");
-//        System.out.println(Arrays.toString(array));
+//        Integer[] array = { 0,1,3,4,2,5,10};
+
+        System.out.println("Original Array:");
+        System.out.println(Arrays.toString(array));
 //        sortTest(array, SortType.BUBBLE);
 //        sortTest(array, SortType.SELECTION);
-//        sortTest(array, SortType.INSERTION);
+        sortTest(array, SortType.INSERTION);
 //        sortTest(array, SortType.SELECTION);
 //        sortTest(array, SortType.SHELL);
-        sortTest(array, SortType.MERGE);
-        sortTest(array, SortType.QUICK);
+//        sortTest(array, SortType.MERGE);
+//        sortTest(array, SortType.QUICK);
     }
 
 
@@ -47,7 +49,8 @@ public class SortTest {
                 Merge.sort(array);
                 break;
             case BUBBLE:
-                Bubble.sort(array);
+//                Bubble.sort(array);
+                Bubble.sortOpt(array);
                 break;
             case SELECTION:
                 Selection.sort(array);
